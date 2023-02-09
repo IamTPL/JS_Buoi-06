@@ -123,7 +123,10 @@
                         </p>
                         <ul>
                             <li>Điều kiện tiếp tục vòng lặp là sum < 10000</li>
-                            <li>sum sẽ là tổng cộng dồn của biến bước nhảy sau mỗi lần lặp</li>
+                            <li>
+                                sum sẽ là tổng cộng dồn của biến bước nhảy sau
+                                mỗi lần lặp
+                            </li>
                         </ul>
                     </div>
                     <form onsubmit="return false" action="">
@@ -153,49 +156,108 @@
                             <strong>Gợi ý:</strong>
                         </p>
                         <p>
-                            Sử dụng event onchange của dropdown để xử lý ẩn hiện
-                            cho ô nhập số kết nối khi chọn loại khách hàng:
-                            Onchange
-                        </p>
-                        <p>
-                            Đối với loại khách hàng Doanh Nghiệp, tổng 10 kết
-                            nối đầu là 75$ => đây là giá trọn gói, nếu doanh
-                            nghiệp lắp đặt số kết nối nhỏ hơn 10 thì vẫn phải
-                            đóng 75$. Vd: 6 kết nối thì vẫn sẽ cộng 75$ vào tổng
-                            tiền. => Nếu lắp trên 10 kết nối thì kết nối thứ 11
-                            trở đi sẽ tính 5$/kết nối
+                            Sử dụng các toán tử sau để tính lũy thừa: Math.pow
+                            hoặc **
                         </p>
                     </div>
                     <form onsubmit="return false" action="">
                         <div class="row">
-                            <select id="customer">
-                                <option value="0">Chọn loại khách hàng</option>
-                                <option value="1">Nhà Dân</option>
-                                <option value="2">Doanh Nghiệp</option>
-                            </select>
                             <input
-                                id="cumtomer-id"
+                                id="numX"
                                 type="text"
-                                placeholder="Nhập mã khách hàng"
+                                placeholder="Nhập số x"
                             />
                             <input
-                                id="channels"
+                                id="numN"
                                 type="number"
-                                placeholder="Số kênh cao cấp"
-                            />
-                            <input
-                                class="connect"
-                                id="connect"
-                                type="number"
-                                placeholder="Số kết nối"
+                                placeholder="Nhập số n"
                             />
                         </div>
-                        <button onclick="TinhTienCap()">Tính tiền cáp</button>
+                        <button onclick="getSum()">Tính tổng</button>
                     </form>
 
                     <div class="display">
                         <i class="fa-solid fa-arrow-right"></i>
                         <span style="font-size: 2rem" id="display-4">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <a href="#sub-5" class="title">
+                    <div class="book">
+                        <i class="fa-solid fa-book-open"></i>
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    Bài 5
+                </a>
+                <div class="sub-menu" id="sub-5">
+                    <div class="topic">5️⃣ Tính giai thừa</div>
+                    <form onsubmit="return false" action="">
+                        <div class="row">
+                            <input
+                                id="giaiThua"
+                                type="text"
+                                placeholder="Nhập số n"
+                            />
+                        </div>
+                        <button onclick="tinhGiaiThua()">Tính giai thừa</button>
+                    </form>
+
+                    <div class="display">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span style="font-size: 2rem" id="display-5">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <a href="#sub-6" class="title">
+                    <div class="book">
+                        <i class="fa-solid fa-book-open"></i>
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    Bài 6
+                </a>
+                <div class="sub-menu" id="sub-6">
+                    <div class="topic">6️⃣ Tạo thẻ div</div>
+                    <form onsubmit="return false" action="">
+                        <button onclick="createDivTag()">Tạo thẻ</button>
+                    </form>
+
+                    <div class="display">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <div style="font-size: 2rem" id="display-6"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <a href="#sub-7" class="title">
+                    <div class="book">
+                        <i class="fa-solid fa-book-open"></i>
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    Bài 7
+                </a>
+                <div class="sub-menu" id="sub-7">
+                    <div class="topic">7️⃣ In số nguyên tố</div>
+                    <form onsubmit="return false" action="">
+                        <div class="row">
+                            <input
+                                id="n"
+                                type="number"
+                                placeholder="Nhập số n"
+                            />
+                        </div>
+                        <button onclick="getPrimeNumber()">
+                            Tính giai thừa
+                        </button>
+                    </form>
+
+                    <div style="overflow: scroll" class="display">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <span style="font-size: 2rem" id="display-7">0</span>
                     </div>
                 </div>
             </div>
